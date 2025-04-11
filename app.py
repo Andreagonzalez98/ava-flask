@@ -24,7 +24,8 @@ def load_user(user_id):
 # Rutas principales
 @app.route('/')
 def index():
-    return redirect(url_for('login'))
+    return "¡Hola! La app Flask está corriendo correctamente en Render 🎉"
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
