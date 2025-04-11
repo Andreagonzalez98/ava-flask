@@ -50,8 +50,9 @@ def login():
         if usuario and usuario.check_password(form.password.data):
             login_user(usuario)
             flash('Inicio de sesión exitoso.', 'success')
-            return redirect(url_for('dashboard'))
-        flash('Correo o contraseña incorrectos.', 'danger')
+            return redirect(url_for('modulos'))  # Redirige a tu vista principal
+        else:
+            flash('Correo o contraseña incorrectos.', 'danger')
     return render_template('login.html', form=form)
 
 @app.route('/logout')
