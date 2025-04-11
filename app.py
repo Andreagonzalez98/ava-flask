@@ -54,6 +54,8 @@ def login():
         else:
             flash('Correo o contraseña incorrectos.', 'danger')
     return render_template('login.html', form=form)
+from app.routes.catalogo import catalogo_bp
+app.register_blueprint(catalogo_bp)
 
 @app.route('/logout')
 @login_required
