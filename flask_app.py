@@ -1,8 +1,8 @@
 from flask import Flask, render_template, redirect, url_for, flash, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user, UserMixin
-from forms import RegistroForm, LoginForm
-from models import db, Usuario, Modulo, Carrito
+from app.forms import RegistroForm, LoginForm
+from app.models import db, Usuario, Modulo, Carrito
 
 login_manager = LoginManager()
 login_manager.login_view = 'login'
