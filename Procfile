@@ -1,1 +1,2 @@
-web: gunicorn flaks_app:create_app()
+web: gunicorn flaks_app:app
+
