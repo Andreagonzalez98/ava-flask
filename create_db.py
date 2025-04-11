@@ -1,5 +1,5 @@
-from flaks_app import create_app
-from models import db, Modulo, Usuario
+from flask_app import create_app
+from app.models import db, Modulo, Usuario
 
 app = create_app()
 

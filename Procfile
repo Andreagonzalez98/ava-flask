@@ -1,1 +1,1 @@
-web: gunicorn flaks_app:app
+web: gunicorn wsgi:app
