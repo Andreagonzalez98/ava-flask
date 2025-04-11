@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Tu carrito</h2>
+
+    {% if items %}
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Módulo</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.modulo.nombre }}</td>
+                <td>{{ item.modulo.descripcion }}</td>
+                <td>{{ item.modulo.precio }} USD</td>
+                <td>
+                    <a href="{{ url_for('eliminar_carrito', id=item.id) }}" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><strong>Total</strong></td>
+                <td colspan="2"><strong>
+                    {{ items | map(attribute='modulo.precio') | sum }} USD
+                </strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    {% else %}
+    <div class="alert alert-info" role="alert">
+        No hay módulos en tu carrito.
+    </div>
+    {% endif %}
+
+    <a href="{{ url_for('dashboard') }}" class="btn btn-primary mt-3">Seguir explorando</a>
+</div>
+{% endblock %}
+

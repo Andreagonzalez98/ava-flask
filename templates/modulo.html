@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">{{ modulo.nombre }}</h3>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Descripción detallada:</h5>
+            <p class="card-text" style="white-space: pre-line;">{{ modulo.descripcion }}</p>
+
+            <p class="card-text">
+                <strong>Precio:</strong> {{ modulo.precio }} USD
+            </p>
+
+            <a href="{{ url_for('agregar_carrito', id=modulo.id) }}" class="btn btn-success">Agregar al carrito</a>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Volver</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

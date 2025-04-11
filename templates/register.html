@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Registro de usuario</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        <div class="mb-3">
+            {{ form.nombre.label }}
+            {{ form.nombre(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.correo.label }}
+            {{ form.correo(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.password.label }}
+            {{ form.password(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+
+        <div class="mb-3">
+            {{ form.contraseña.label }}
+            {{ form.contraseña(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.submit(class="btn btn-success") }}
+        </div>
+    </form>
+</div>
+{% endblock{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Registro de usuario</h2>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        <div class="mb-3">
+            {{ form.nombre.label }}
+            {{ form.nombre(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.correo.label }}
+            {{ form.correo(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.password.label }}
+            {{ form.password(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</div>
+{% endblock %} %}
+
